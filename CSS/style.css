@@ -31,3 +31,6 @@ body{
     margin: 0 20px 20px;
 }
 
+.line{
+    text-decoration: line-through;
+}

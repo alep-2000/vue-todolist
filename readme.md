@@ -6,9 +6,15 @@ SOLUZIONE:
 2 - Creare la struttura di vuejs;
 3 - Aggiungere l'array di oggetti nel data con due proprietà text e done;
 4 - Aggiungere al div il v-for per mostrare a schermo le task;
+5 - Creare un controllo per vedere se done è true o false;
+    5.1 - ? SE è true applicare la classe line;
+    5.2 - : ALTRIMENTI nulla
 5 - Creare un controllo;
-    5.1 - ?SE il valore di done è uguale a false mostra una x;
-    5.2 - : ALTRIMENTI mostra un simbolo di check;
+    5.1 - ?SE il valore di done è uguale a false mostra una la classe x;
+    5.2 - : ALTRIMENTI inserisci la classe check;
+6 - Implementare il cambio da true a false e viceversa;
+    6.1 - Applicare al button un evento al click;
+    6.2 - 
 6 - Implementare l'elimininazione di una task;
     6.1 - In un button collegare un evento al click  alla funzione per eliminare la task;
     6.2 - Creare la funzione per eliminare la task

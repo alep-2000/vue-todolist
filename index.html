@@ -9,45 +9,33 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <h1 class="text-center my-3">VUE TO DO LIST</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="content">
-                    <h2 class="text-center title">To Do List</h2>
-                    <hr class="hr">
-                    <ul class="list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between">
-                            <div class="task ">
-                                T  
-                            </div> 
-                            <div class="button">
-                                <button class="btn btn-sm btn-primary"><i class="fa-solid fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-x"></i></button>
-                            </div>
-                        </li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                        <li class="list-group-item">T</li>
-                        <hr>
-                    </ul>
-                    <div class="add-task">
-                        <input type="text" class="input">
-                        <button class="btn btn-sm btn-warning"><i class="fa-solid fa-plus"></i>AGGIUNGI</button>
-                    </div>  
+    <div id="app">
+        <h1 class="text-center my-3"> {{title_app}} </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h2 class="text-center title">{{title_task}}</h2>
+                        <hr class="hr">
+                        <ul class="list-group-flush">
+                            <li v-for="(task,index) in tasks" class="list-group-item d-flex justify-content-between" >
+                                <div :class="task.done === true ? 'line' : '' ">
+                                    {{task.text}}
+                                </div> 
+                                <div>
+                                    <button class="btn btn-sm m-2" :class="task.done ? 'btn-primary' : 'btn-secondary'" @click="change (index)"> <i class="fa-solid" :class="task.done ? 'fa-check' : 'fa-x' "></i> 
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="add-task">
+                            <input type="text" class="input">
+                            <button class="btn btn-sm btn-warning"><i class="fa-solid fa-plus"></i>AGGIUNGI</button>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </div>
