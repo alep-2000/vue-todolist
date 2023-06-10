@@ -50,6 +50,9 @@ createApp({
     methods: {
         change(index){
             this.tasks[index].done = !this.tasks[index].done
+        },
+        remove(index){
+            this.tasks.splice(index, 1)
         }
     },
 }).mount('#app');

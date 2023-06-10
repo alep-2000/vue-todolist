@@ -23,9 +23,9 @@
                                     {{task.text}}
                                 </div> 
                                 <div>
-                                    <button class="btn btn-sm m-2" :class="task.done ? 'btn-primary' : 'btn-secondary'" @click="change (index)"> <i class="fa-solid" :class="task.done ? 'fa-check' : 'fa-x' "></i> 
+                                    <button class="btn btn-sm m-2" :class="task.done ? 'btn-primary' : 'btn-secondary'" @click="change(index)"> <i class="fa-solid" :class="task.done ? 'fa-check' : 'fa-x' "></i> 
                                     </button>
-                                    <button class="btn btn-sm btn-danger">
+                                    <button class="btn btn-sm btn-danger" @click="remove(index)">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
                                 </div>
