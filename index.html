@@ -17,6 +17,9 @@
                     <div class="content">
                         <h2 class="text-center title">{{title_task}}</h2>
                         <hr class="hr">
+                        <div v-if="tasks.length === 0" class="text-center">
+                            <h3>Hai completato i tuoi compiti</h3>
+                        </div>
                         <ul class="list-group-flush">
                             <li v-for="(task,index) in tasks" class="list-group-item d-flex justify-content-between" >
                                 <div :class="task.done === true ? 'line' : '' ">
@@ -32,7 +35,7 @@
                             </li>
                         </ul>
                         <div class="add-task">
-                            <input type="text" class="input">
+                            <input type="text" class="input" v-model="new_task" @keyup.enter="add_task(index)">
                             <button class="btn btn-sm btn-warning"><i class="fa-solid fa-plus"></i>AGGIUNGI</button>
                         </div>  
                     </div>

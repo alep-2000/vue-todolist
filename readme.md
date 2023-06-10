@@ -20,8 +20,11 @@ SOLUZIONE:
     8.1 - In un button collegare un evento al click  alla funzione per eliminare la task;
     8.2 - Creare la funzione per eliminare la task, utilizzando lo splice;
     8.3 - Richiamare la funzione nell'evento creato precedentemente;
+    8.4 - Aggiungere un messaggio quando non ci sono più tasks, creando una condizione;
+    8.5 - ? SE la lunghezza dell'array è uguale a 0, inserisci il messaggio;
 9 - Implementare l'aggiunta di una task;
     9.1 Utilizzare in un input il v-model per digitare una nuova task;
-    9.2 - Aggiungere una funzione per poter aggiungere una task;
-10 - Implementare il cambio di stato di una task;
-    10.1 - Creare una funzione per poter modificare lo stato della task da false a true o viceversa;
+    9.2 - Aggiungere al button un evento keyup.enter;
+    9.3 - Aggiungere una funzione per poter aggiungere una task, creando un nuovo oggetto;
+    9.4 - Pushare il nuovo oggetto;
+    9.5 - Aggiungere all'evento la funzione

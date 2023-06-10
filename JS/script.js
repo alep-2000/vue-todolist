@@ -44,7 +44,8 @@ createApp({
                     text: 'Mettere il diesel',
                     done: false
                 }
-            ]
+            ],
+            new_task: ''
         }
     },
     methods: {
@@ -53,6 +54,14 @@ createApp({
         },
         remove(index){
             this.tasks.splice(index, 1)
+        },
+        add_task(){
+            let obj ={
+                        text: this.new_task,
+                        done: false
+                    }
+            this.tasks.push(obj);
+            this.new_task = ''
         }
     },
 }).mount('#app');
