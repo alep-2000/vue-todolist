@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content .hr{
+    border: 1px solid black;
+}
+
+.title{
+    color: red;
+}
+
+.input{
+    width: 75%;
+}
+
+.add-task{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 20px;
+}
+
+.line{
+    text-decoration: line-through;
+}
