@@ -10,39 +10,48 @@ createApp({
             tasks: [
                 {
                     text: 'Fare la spesa',
-                    done: true
+                    done: true,
+                    edit: false
                 },
                 {
                     text: 'Comprare la tv',
-                    done: false
+                    done: false,
+                    edit: false
                 },
                 {
                     text: 'Fare l\'esercizio',
-                    done: true
+                    done: true,
+                    edit: false
                 },
                 {
                     text: 'Preparare il pranzo',
-                    done: false
+                    done: false,
+                    edit: false
                 },
                 {
                     text: 'Appendere la tenda',
-                    done: true
+                    done: true,
+                    edit: false
                 },
                 {
                     text: 'Ascoltare la musica',
-                    done: false
+                    done: false,
+                    edit: false
                 },
                 {
                     text: 'Suonare la batteria',
-                    done: true
+                    done: true,
+                    edit: false
                 },
                 {
                     text: 'Andare in palestra',
-                    done: false
+                    done: false,
+                    edit: false
                 },
                 {
                     text: 'Mettere il diesel',
-                    done: false
+                    done: false,
+                    edit: false
                 }
             ],
             new_task: ''
@@ -62,6 +71,9 @@ createApp({
                     }
             this.tasks.push(obj);
             this.new_task = ''
+        },
+        modified_task(index){
+            this.tasks[index].edit = !this.tasks[index].edit
         }
     },
 }).mount('#app');

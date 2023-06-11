@@ -23,10 +23,18 @@
                         <ul class="list-group-flush">
                             <li v-for="(task,index) in tasks" class="list-group-item d-flex justify-content-between" >
                                 <div :class="task.done === true ? 'line' : '' ">
-                                    {{task.text}}
+                                    <div v-if="task.edit">
+                                        <input type="text" class="input-task" v-model="task.text">
+                                    </div>
+                                    <div v-else>
+                                        {{task.text}}
+                                    </div>
                                 </div> 
                                 <div>
-                                    <button class="btn btn-sm m-2" :class="task.done ? 'btn-primary' : 'btn-secondary'" @click="change(index)"> <i class="fa-solid" :class="task.done ? 'fa-check' : 'fa-x' "></i> 
+                                    <button class="btn btn-sm " :class="task.done ? 'btn-primary' : 'btn-secondary'" @click="change(index)"> <i class="fa-solid" :class="task.done ? 'fa-check' : 'fa-x' "></i> 
+                                    </button>
+                                    <button class="btn btn-sm btn-warning m-2" @click="modified_task (index)">
+                                        <i class="fa-regular fa-pen-to-square"></i>
                                     </button>
                                     <button class="btn btn-sm btn-danger" @click="remove(index)">
                                         <i class="fa-solid fa-trash"></i>
